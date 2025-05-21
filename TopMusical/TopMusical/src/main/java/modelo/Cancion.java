@@ -15,8 +15,9 @@ import java.io.*;
  */
 public class Cancion implements Comparable<Cancion> {
 
-    private String titulo;
     private String cantante;
+    private String titulo;
+    
 
     private String imagen;
     private int posActual; //la posicion actual en el ranking
