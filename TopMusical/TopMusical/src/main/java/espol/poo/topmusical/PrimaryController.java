@@ -35,7 +35,7 @@ public class PrimaryController {
         for (Cancion c : listaCanciones ) {
 
             HBox hb = new HBox(10);//hbox para ubicar info de cada cancion
-            Label lbp = new Label(c.getPosActual() + "");
+            Label lbp = new Label( ""+ c.getPosActual());
             lbp.setStyle("-fx-font-weight: bold;-fx-font-size: 40;");
             ImageView iv = new ImageView();
             try {
@@ -48,7 +48,7 @@ public class PrimaryController {
             Label lbT = new Label(c.getTitulo() + " \n" + c.getCantante());//titulo y cantante
             lbT.setStyle("-fx-font-weight: bold;-fx-font-size: 14;");
 
-            hb.getChildren().addAll(lbp, iv, lbT);//agregar al hbox
+            hb.getChildren().addAll( iv,lbT,lbp);//agregar al hbox
 
             hb.setOnMouseClicked(eh -> mostrarHistorial(c));//establecer el evento del click
             vbTop10.getChildren().add(hb);//agregar al vbox
@@ -77,10 +77,10 @@ public class PrimaryController {
             int prev = -1;
             for (int p : c.getHistorialPos()) {
                 System.out.println("posicion"+p);
-                String ruta = "right.PNG";
+                String ruta = "left.PNG";
                 if (prev == -1) {
                     //imagen de ingreso
-                    ruta = "right.PNG";
+                    ruta = "left.PNG";
                    
                     prev = p;
                 } else if (p <= prev) {
@@ -96,15 +96,16 @@ public class PrimaryController {
                 lbP.setStyle("-fx-font-weight: bold;-fx-font-size: 30;");
                 prev = p;
                 ImageView iv = new ImageView();
+                
                 try {
-                    Image img = new Image(new FileInputStream("img/" + ruta));
+                    Image img = new Image(new FileInputStream(ruta+"img/"));
                     iv.setImage(img);
 
                 } catch (FileNotFoundException ex) {
                     ex.printStackTrace();
                 }
                 //actualizar el hbox
-                Platform.runLater(() -> hbHistorial.getChildren().setAll(iv, lbP));
+                Platform.runLater(() -> hbHistorial.getChildren().setAll(lbP,iv));
 
                 //esperar 1 segundo
                 try {
