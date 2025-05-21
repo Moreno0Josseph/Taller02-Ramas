@@ -32,6 +32,7 @@ public class PrimaryController {
     public void initialize() {
         listaCanciones = Cancion.leerCanciones();
         Collections.sort(listaCanciones);
+       
         for (Cancion c : listaCanciones ) {
 
             HBox hb = new HBox(10);//hbox para ubicar info de cada cancion
@@ -59,6 +60,7 @@ public class PrimaryController {
 
     private void mostrarHistorial(Cancion c) {
         lblTitulo.setText(c.getTitulo());
+        
 
         try {
             Image img = new Image(new FileInputStream("img/" + c.getImagen()), 100, 100, true, true);
