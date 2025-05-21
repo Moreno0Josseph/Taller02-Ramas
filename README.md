@@ -11,3 +11,10 @@
 
 
 ![Captura de pantalla 2025-05-21 163045](https://github.com/user-attachments/assets/afad37f8-38df-46e2-bf07-7bedade31ad3)
+
+
+
+
+
+
+![Captura de pantalla 2025-05-21 162740](https://github.com/user-attachments/assets/a869c3cd-49a1-493f-a3b8-f5841eb349a3)
