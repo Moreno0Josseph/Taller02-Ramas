@@ -19,3 +19,4 @@
 
 ![Captura de pantalla 2025-05-21 162740](https://github.com/user-attachments/assets/a869c3cd-49a1-493f-a3b8-f5841eb349a3)
 
+![Captura de pantalla 2025-05-21 161841](https://github.com/user-attachments/assets/146cd91d-b068-43c8-b67c-ad5280c712d0)
